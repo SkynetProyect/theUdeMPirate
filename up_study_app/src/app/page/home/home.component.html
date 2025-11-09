@@ -1,0 +1,85 @@
+<div class="flex h-screen w-full overflow-hidden">
+  <!-- Contenedor principal flexible -->
+  <div class="flex-1 bg-[oklch(20.5%_0_0)]">
+
+    <!-- Header -->
+    <header class="flex items-center bg-[oklch(70.8%_0_0)] text-black justify-center text-center p-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="size-9">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+      </svg>
+
+      <h1 class="text-4xl font-black">Study App</h1>
+    </header>
+
+  <button
+    routerLink="/upload"
+    class="w-9/10 bg-[oklch(40%_0_0)] mt-10 ml-10 text-white p-3 border rounded-3xl
+          focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer">
+    Agregar
+  </button>
+
+    <!-- 🔍 Buscador -->
+    <!-- 🔹 Selects de filtros -->
+    <div class="flex gap-10 mt-10">
+      <!-- Materias -->
+      <div class="flex flex-col w-[47%]">
+        <label class="text-white ml-12">Materia</label>
+        <select
+          (change)="buscarPorMateria($any($event.target).value)"
+          class="w-9/10 bg-[oklch(40%_0_0)] mt-1 ml-10 text-white p-3 border rounded-3xl
+                 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="">Todas las materias</option>
+          <option *ngFor="let materia of materias" [value]="materia.id">
+            {{ materia.nombre }}
+          </option>
+        </select>
+      </div>
+
+      <!-- Autores -->
+      <div class="flex flex-col w-[47%]">
+        <label class="text-white ml-12">Autor</label>
+        <select
+          (change)="buscarPorAutores($any($event.target).value)"
+          class="w-9/10 bg-[oklch(40%_0_0)] mt-1 ml-10 text-white p-3 border rounded-3xl
+                 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="">Todos los autores</option>
+          <option *ngFor="let autor of autores" [value]="autor.id">
+            {{ autor.author }}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 📄 Tarjetas de documentos -->
+    <div class="flex flex-wrap justify-center w-full mt-10 gap-6 px-4">
+      <div
+        *ngFor="let doc of documentos"
+        class="flex flex-col text-black font-bold rounded-3xl w-[400px] py-13 bg-[oklch(70.8%_0_0)]">
+
+        <!-- Título del documento -->
+        <p class="mt-5 font-bold text-2xl text-white ml-6">
+          {{ doc.tittle }}
+        </p>
+        <!-- descripcion del documento -->
+        <p class="mt-5 font-bold text-2xl text-white ml-6">
+          {{ doc.description }}
+        </p>
+
+        <!-- Autor (opcional, si quieres mostrarlo) -->
+        <p class="text-white ml-6 mt-2 opacity-80 text-sm">
+          Autor ID: {{ obtenerNombreAutor(doc.authorId) }}
+        </p>
+
+        <!-- Botón Ver -->
+        <button
+          (click)="openPdf(doc.id)"
+          class="mt-5 text-black cursor-pointer font-bold py-3 ml-6 rounded-3xl bg-[#c026d3] w-8/9 text-white hover:bg-[#a21caf] transition-colors">
+          Ver
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

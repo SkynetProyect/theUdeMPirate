@@ -1,0 +1,23 @@
+# Crear volumen persistente (almacena los datos del DB)
+docker volume create pgdata
+
+# Crear y ejecutar contenedor de PostgreSQL
+docker run -d \
+  --name postgres-db \
+  -e POSTGRES_USER=admin \
+  -e POSTGRES_PASSWORD=admin123 \
+  -e POSTGRES_DB=mydb \
+  -v pgdata:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  postgres:15
+
+
+  frontend:
+    build:
+      context: ./up_study_app    # <- ajusta si tu frontend está en otra
+      dockerfile: Dockerfile
+    container_name: upstudy-frontend
+    ports:
+      - "4200:4200"
+    depends_on:
+      - backend

@@ -1,0 +1,43 @@
+# docker-compose.yml (corregido)
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./DB/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  backend:
+    build:
+      context: ./studyup 
+      dockerfile: Dockerfile
+    container_name: upstudy-backend
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/mydb
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: admin123
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+  frontend:
+    build:
+      context: ./up_study_app    # <- ajusta si tu frontend está en otra
+      dockerfile: Dockerfile
+    container_name: upstudy-frontend
+    ports:
+      - "4200:4200"
+    depends_on:
+      - backend
+
+
+volumes:
+  pgdata:

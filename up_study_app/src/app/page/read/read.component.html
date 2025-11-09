@@ -1,0 +1,55 @@
+<div class="flex flex-col h-screen w-full overflow-hidden">
+  
+  <!-- Header con botón de regreso -->
+  <header class="flex items-center bg-[oklch(70.8%_0_0)] text-black justify-between px-6 p-4 shadow-md">
+    <button 
+      routerLink="/"
+      class="flex items-center gap-2 bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+      </svg>
+      Volver
+    </button>
+
+    <div class="flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="size-9">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+      </svg>
+      <h1 class="text-4xl font-black ml-3">Study App</h1>
+    </div>
+
+    <div class="w-24"></div>
+  </header>
+
+  <!-- Contenedor del PDF -->
+  <div class="flex-1 bg-[oklch(20.5%_0_0)] overflow-hidden flex items-center justify-center p-4">
+    
+    <!-- Loader mientras carga -->
+    <div *ngIf="isLoading" class="text-white text-center">
+      <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-white mx-auto mb-4"></div>
+      <p>Cargando documento...</p>
+    </div>
+
+    <!-- Mensaje de error -->
+    <div *ngIf="errorMessage" class="bg-red-100 border border-red-400 text-red-700 px-6 py-4 rounded-lg max-w-md">
+      <p class="font-bold mb-2">Error al cargar el documento</p>
+      <p>{{ errorMessage }}</p>
+      <button 
+        routerLink="/"
+        class="mt-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors">
+        Volver al inicio
+      </button>
+    </div>
+
+    <!-- Visor de PDF -->
+    <iframe 
+      *ngIf="pdfUrl && !isLoading && !errorMessage"
+      [src]="pdfUrl"
+      class="w-full h-full border-0 rounded-lg shadow-2xl"
+      title="Visor de PDF">
+    </iframe>
+
+  </div>
+</div>

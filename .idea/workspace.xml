@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c869f374-1d48-4fc0-985b-63fec3e98c4d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/DB/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/seed.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/docker/wait-for-postgres.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/eslint.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/nest-cli.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/app.controller.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/app.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/app.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/auth/admin.guard.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/auth/auth.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/auth/auth.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/auth/auth.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/auth/dto/login.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/auth/firebase/firebase-auth.guard.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/auth/firebase/firebase.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/auth/firebase/firebase.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/auth/firebase/firebase.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/auth/profile/profile.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/documents/documents.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/documents/documents.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/documents/documents.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/documents/dto/create-document.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/documents/dto/update-document.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/entities/account-deletion-request.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/entities/categories.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/entities/comments.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/entities/document-tags.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/entities/document.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/entities/downloads.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/entities/favorite.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/entities/moderation-log.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/entities/roles.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/entities/tags.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/entities/usuario.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/roles/dto/create-role.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/roles/roles.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/roles/roles.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/roles/roles.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/usuarios/dto/create-usuario.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/usuarios/dto/uptade-usuario.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/usuarios/usuarios.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/usuarios/usuarios.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/src/usuarios/usuarios.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/swagger.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/test/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/test/jest-e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/tsconfig.build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/up-study-back/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/up_study_app/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/up_study_app/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/up_study_app/src/app/page/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/up_study_app/src/app/page/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/up_study_app/src/app/page/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/up_study_app/src/app/page/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/post/model/DocumentModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/post/post.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/post/post.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/post/post.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/profile/profile.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/profile/profile.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/profile/profile.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/publication/publication.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/publication/publication.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/publication/publication.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/publication/publication.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/page/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/up_study_app/src/app/page/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/shared/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/up_study_app/src/app/shared/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/shared/services/documents.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/up_study_app/src/app/shared/services/documents.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/sidebar/sidebar.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/sidebar/sidebar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/sidebar/sidebar.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/app/sidebar/sidebar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up_study_app/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/up_study_app/src/environments/environment.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="354CR3MIhGsyuzGqDaOapk310vI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/developer/Documents/Universidad/2025-2/gestion de la configuracion/Study-UP/studyup"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c869f374-1d48-4fc0-985b-63fec3e98c4d" name="Changes" comment="" />
+      <created>1762359945449</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762359945449</updated>
+    </task>
+    <servers />
+  </component>
+</project>

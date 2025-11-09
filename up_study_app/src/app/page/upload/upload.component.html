@@ -1,0 +1,148 @@
+<div class="flex flex-col h-screen w-full overflow-hidden">
+  
+  <!-- Header -->
+  <header class="flex items-center bg-[oklch(70.8%_0_0)] text-black justify-center text-center p-4 shadow-md">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" class="size-9">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+    </svg>
+    <h1 class="text-4xl font-black ml-3">Study App</h1>
+  </header>
+
+  <!-- Contenedor principal centrado -->
+  <div class="flex-1 bg-[oklch(20.5%_0_0)] flex items-center justify-center p-4 overflow-y-auto">
+    
+    <!-- Formulario -->
+    <form 
+      #docForm="ngForm" 
+      (ngSubmit)="onSubmit()" 
+      class="bg-gray-100 rounded-2xl shadow-2xl p-6 sm:p-8 w-full max-w-2xl"
+    >
+      <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-center text-gray-800">
+        Nuevo Documento
+      </h2>
+
+      <!-- Grid de 3 columnas en pantallas grandes -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        
+
+        <!-- Autor -->
+        <div>
+          <label class="block mb-2 font-medium text-gray-700">
+            Autor <span class="text-red-500">*</span>
+          </label>
+          <select 
+            name="authorid"
+            [(ngModel)]="myDocument.authorId"
+            class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            required
+          >
+            <option [ngValue]="null" disabled>Selecciona un autor</option>
+            <option 
+              *ngFor="let autor of autores" 
+              [ngValue]="autor.id">
+              {{ autor.author }}
+            </option>
+          </select>
+        </div>
+
+        <!-- Materia 👇 NUEVO -->
+        <div>
+          <label class="block mb-2 font-medium text-gray-700">
+            Materia <span class="text-red-500">*</span>
+          </label>
+          <select 
+            name="categoryId"
+            [(ngModel)]="myDocument.categoryId"
+            class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            required
+          >
+            <option [ngValue]="null" disabled>Selecciona materia</option>
+            <option 
+              *ngFor="let materia of materias" 
+              [ngValue]="materia.id">
+              {{ materia.nombre }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Título (ancho completo) -->
+      <div class="mb-4">
+        <label class="block mb-2 font-medium text-gray-700">
+          Título <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          name="tittle"
+          [(ngModel)]="myDocument.tittle"
+          class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Ingresa el título del documento"
+          required
+        />
+      </div>
+
+      <!-- Descripción -->
+      <div class="mb-4">
+        <label class="block mb-2 font-medium text-gray-700">Descripción</label>
+        <textarea
+          name="descripcion"
+          [(ngModel)]="myDocument.description"
+          class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+          placeholder="Describe el documento (opcional)"
+          rows="4"
+        ></textarea>
+      </div>
+
+      <!-- Documento -->
+      <div class="mb-6">
+        <label class="block mb-2 font-medium text-gray-700">
+          Archivo <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="file"
+          (change)="onFileSelected($event)"
+          class="w-full border border-gray-300 rounded-lg p-3 
+                 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 
+                 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 
+                 hover:file:bg-blue-100 file:cursor-pointer cursor-pointer
+                 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          accept="application/pdf,image/*"
+          required
+        />
+        <p class="text-sm text-gray-500 mt-2">Formatos: PDF, imágenes</p>
+      </div>
+
+      <!-- Mensaje de error (si existe) -->
+      <div *ngIf="errorMessage" class="mb-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg">
+        {{ errorMessage }}
+      </div>
+
+      <!-- Botones -->
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button
+          type="submit"
+          [disabled]="!docForm.form.valid || isLoading"
+          class="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold
+                 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed 
+                 transition-all duration-200 shadow-md hover:shadow-lg
+                 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        >
+          {{ isLoading ? 'Guardando...' : 'Guardar Documento' }}
+        </button>
+
+        <button
+          type="button"
+          routerLink="/"
+          class="flex-1 bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold
+                 hover:bg-gray-600 transition-all duration-200 shadow-md hover:shadow-lg
+                 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+        >
+          Cancelar
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>

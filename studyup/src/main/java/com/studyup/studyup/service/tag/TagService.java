@@ -2,7 +2,6 @@ package com.studyup.studyup.service.tag;
 
 import com.studyup.studyup.model.Tag;
 import com.studyup.studyup.repository.TagRepository;
-import com.studyup.studyup.service.tag.TagUsecase;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

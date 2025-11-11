@@ -2,7 +2,6 @@ package com.studyup.studyup.service.document;
 
 import com.studyup.studyup.model.Document;
 import com.studyup.studyup.repository.DocumentRepository;
-import com.studyup.studyup.service.document.DocumentUsecase;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

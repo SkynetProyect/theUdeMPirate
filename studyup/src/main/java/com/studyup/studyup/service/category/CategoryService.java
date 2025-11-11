@@ -2,7 +2,6 @@ package com.studyup.studyup.service.category;
 
 import com.studyup.studyup.model.Category;
 import com.studyup.studyup.repository.CategoryRepository;
-import com.studyup.studyup.service.category.CategoryUsecase;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,9 +1,9 @@
 # Etapa 1: compilar el proyecto
-FROM eclipse-temurin:21-jdk AS build
+FROM gradle:8.10.2-jdk21 AS build
 WORKDIR /app
 
 COPY . .
-RUN ./gradlew clean build -x test
+RUN gradle clean build -x test
 
 #Etapa 2: usar
 FROM eclipse-temurin:21-jre AS use

@@ -51,7 +51,7 @@ jobs:
         - name: Build Docker image
           uses: docker/build-push-action@v6
           with:
-            context: .
+            context: ./studyup
             file: ./studyup/Dockerfile
             push: true
             tags: ${{ secrets.DOCKERHUB_USERNAME }}/upstudy-backend:latest
@@ -73,7 +73,7 @@ jobs:
         - name: Build Docker image
           uses: docker/build-push-action@v6
           with:
-            context: .
+            context: ./up_study_app
             file: ./up_study_app/Dockerfile
             push: true
             tags: ${{ secrets.DOCKERHUB_USERNAME }}/upstudy-frontend:latest

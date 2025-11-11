@@ -54,7 +54,7 @@ jobs:
             context: .
             file: ./studyup/Dockerfile
             push: true
-            tags: ${{ secrets.DOCKERHUB_USERNAME }}/back:latest
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/upstudy-backend:latest
 
   docker-build-front:
       runs-on: ubuntu-latest
@@ -76,6 +76,6 @@ jobs:
             context: .
             file: ./up_study_app/Dockerfile
             push: true
-            tags: ${{ secrets.DOCKERHUB_USERNAME }}/front:latest
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/upstudy-frontend:latest
 
   
